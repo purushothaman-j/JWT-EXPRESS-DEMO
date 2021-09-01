@@ -37,7 +37,7 @@ mongoose
     "mongodb+srv://sched-user:axzx6skIMRWAo1aO@schedcheck.gqzgt.mongodb.net/jwtdemo?authSource=admin&replicaSet=atlas-q0revq-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
   )
   .then((result) => {
-    console.log("DB connection successful!");
+    console.log("DB connection successful! ");
   });
 
 app.listen(3000);
