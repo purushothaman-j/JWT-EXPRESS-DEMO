@@ -25,3 +25,5 @@ This is a micro MERN stack application contains signup, signin, me(restricted ac
    "Type" : "BearerToken",
    "Token" : "tokenFromSigninResponse"
    }
+
+Don't forget to change mongoose connection string with yours!
