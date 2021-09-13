@@ -10,6 +10,7 @@ const app = express();
 // parse application/json
 app.use(bodyParser.json());
 
+// nothing to do with demo. just some code snippets.
 app.get("/", async (req, res) => {
   const hashedPass = await bcrypt.hash("omg", 12);
   const token = jwt.sign({ pass: hashedPass }, "somesupersecret", {
@@ -32,12 +33,8 @@ app.use((error, req, res, next) => {
   });
 });
 
-mongoose
-  .connect(
-    "mongodb+srv://sched-user:axzx6skIMRWAo1aO@schedcheck.gqzgt.mongodb.net/jwtdemo?authSource=admin&replicaSet=atlas-q0revq-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
-  )
-  .then((result) => {
-    console.log("DB connection successful! ");
-  });
+mongoose.connect("Mongodb Atlas Connection String.").then((result) => {
+  console.log("DB connection successful! ");
+});
 
 app.listen(3000);
